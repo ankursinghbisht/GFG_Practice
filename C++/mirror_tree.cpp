@@ -119,12 +119,7 @@ public:
         // code here
         if (root == NULL)
             return;
-        Node* t1, * t2;
-        t1 = root->left;
-        t2 = root->right;
-        root->left = t2;
-        root->right = t1;
-
+        swap(root->left, root->right);
         mirror(root->left);
         mirror(root->right);
     }
